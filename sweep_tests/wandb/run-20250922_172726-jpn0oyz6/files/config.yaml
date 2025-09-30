@@ -1,0 +1,90 @@
+_wandb:
+    value:
+        cli_version: 0.19.10
+        m: []
+        python_version: 3.13.3
+        t:
+            "1":
+                - 1
+                - 5
+                - 9
+                - 11
+                - 41
+                - 49
+                - 53
+                - 55
+                - 63
+                - 68
+                - 71
+                - 79
+                - 80
+                - 103
+                - 105
+                - 106
+            "2":
+                - 1
+                - 5
+                - 9
+                - 11
+                - 41
+                - 49
+                - 53
+                - 55
+                - 63
+                - 68
+                - 71
+                - 79
+                - 80
+                - 103
+                - 105
+                - 106
+            "3":
+                - 2
+                - 13
+                - 15
+                - 16
+                - 23
+                - 55
+            "4": 3.13.3
+            "5": 0.19.10
+            "6": 4.51.3
+            "8":
+                - 1
+                - 2
+                - 5
+            "12": 0.19.10
+            "13": darwin-arm64
+backbone:
+    value: resnet18
+coreset_sampling_ratio:
+    value: 0.1
+dataset_root:
+    value: null
+eval_batch_size:
+    value: 16
+evaluator:
+    value: true
+image_size:
+    value: 256
+layers:
+    value:
+        - layer3
+        - layer4
+max_epochs:
+    value: 1
+model:
+    value: PatchCore
+num_neighbors:
+    value: 12
+num_workers:
+    value: 0
+post_processor:
+    value: true
+pre_processor:
+    value: true
+pre_trained:
+    value: true
+train_batch_size:
+    value: 16
+visualizer:
+    value: false

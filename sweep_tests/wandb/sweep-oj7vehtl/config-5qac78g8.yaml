@@ -1,0 +1,10 @@
+wandb_version: 1
+
+backbone:
+  value: resnet18
+layers:
+  value: '["layer3","layer4"]'
+num_neighbors:
+  value: 9
+training_dir:
+  value: /Users/zideng/Work/Anomaly/data/black_widows_200

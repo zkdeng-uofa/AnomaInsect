@@ -1,0 +1,14 @@
+{
+    "train_batch_size": 16,
+    "eval_batch_size": 16,
+    "num_workers": 0,
+    "coreset_sampling_ratio": 0.1,
+    "num_neighbors": 12,
+    "max_epochs": 1,
+    "dataset_root": "/Users/zideng/Work/LDAWT/examples/black_widows_6_17",
+    "training_dir": "data/black_widows_200",
+    "image_size": 256,
+    "model": "PatchCore",
+    "layers": ["layer2", "layer3"],
+    "backbone": "resnet18"
+}

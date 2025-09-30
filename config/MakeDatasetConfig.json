@@ -1,0 +1,10 @@
+{
+  "root_dir": "/Users/zideng/Work/LDAWT/examples/black_widows_6_17",
+  "abnormal_name": "Latrodectus_hesperus",
+  "output_dir": "data/black_widows_200",
+  "normal_sample_size": 200,
+  "abnormal_sample_size": 100,
+  "test_sample_size": 100,
+  "random_seed": 42,
+  "file_extensions": [".jpg", ".png", ".jpeg", ".bmp", ".tiff"]
+}

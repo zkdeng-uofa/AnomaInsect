@@ -1,0 +1,12 @@
+{
+  "os":  "macOS-15.6.1-arm64-arm-64bit-Mach-O",
+  "python":  "CPython 3.13.3",
+  "startedAt":  "2025-09-23T00:38:56.078258Z",
+  "program":  "/Users/zideng/Work/Anomaly/sweep_tests/sweep.ipynb",
+  "codePath":  "sweep.ipynb",
+  "email":  "zkdeng@arizona.edu",
+  "root":  "/Users/zideng/Work/Anomaly/sweep_tests",
+  "host":  "MacBook-Pro-4.local",
+  "executable":  "/Users/zideng/mamba/envs/ml/bin/python",
+  "codePathLocal":  "sweep.ipynb"
+}

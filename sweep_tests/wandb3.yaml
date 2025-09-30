@@ -1,0 +1,13 @@
+program: run_wandb.py
+project: spider-novelty           # optional; else set via env or in run.py
+name: patchcore_spiders_hpo_prog
+method: bayes
+metric:
+  goal: maximize
+  name: image_AUROC           # must match what your run logs
+
+parameters:
+  num_neighbors:
+    values: [9, 12, 15]
+# (optional) ensure the agent starts in a directory where relative paths work:
+# working_dir: /Users/zkdeng/Work/Anomaly/sweep_tests

@@ -1,0 +1,25 @@
+name: patchcore_spiders_hpo_cfg
+method: random
+metric: {goal: maximize, name: val/image_AUROC}
+
+parameters:
+  model.num_neighbors: {values: [3, 6, 12]}
+  # Example extras you might add:
+  # model.coreset_sampling_ratio: {min: 0.05, max: 0.15, distribution: uniform}
+  # model.backbone: {values: ["resnet18","resnet50","wide_resnet50_2"]}
+
+# Micromamba-aware command: init hook -> activate env -> run CLI
+command:
+  - bash
+  - -lc
+  - >
+    if command -v micromamba >/dev/null 2>&1; then
+      eval "$(micromamba shell hook -s bash)";
+    elif [ -x "$HOME/micromamba/bin/micromamba" ]; then
+      eval "$($HOME/micromamba/bin/micromamba shell hook -s bash)";
+    else
+      echo "micromamba not found on PATH; install or add to PATH" >&2; exit 1;
+    fi;
+    micromamba activate ml;
+    anomalib train \
+      --config /User/zkdeng/Work/Anomaly/sweep_tests/patchcore_spiders.yaml ${args}

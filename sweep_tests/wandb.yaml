@@ -1,0 +1,35 @@
+# wandb.yaml  —— minimal sweep spec for Anomalib PatchCore
+project: spider-novelty
+name: patchcore-hpo
+method: bayes            # grid | random | bayes
+metric:
+  name: val/image_AUROC  # make sure this matches what your run logs
+  goal: maximize
+
+parameters:
+  model.backbone:
+    values: [resnet1]
+
+  model.layers:          # Hydra accepts YAML list syntax in overrides
+    values:
+      - ["layer1","layer4"]
+
+  model.coreset_sampling_ratio:
+    distribution: uniform
+    min: 0.05
+    max: 0.15
+
+  model.num_neighbors:
+    values: [12]
+
+  data.image_size:       # only if your config exposes this; otherwise omit
+    values: [256]
+
+  # You can also sweep thresholding policy (if you’ve exposed it)
+  # postproc.target_fpr:
+  #   values: [0.001, 0.005, 0.01]
+
+early_terminate:
+  type: hyperband
+  min_iter: 5
+
