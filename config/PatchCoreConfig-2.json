@@ -9,7 +9,7 @@
     "training_dir": "/Users/zideng/Work/Anomaly/data/black_widows_200",
     "image_size": 256,
     "model": "PatchCore",
-    "layers": ["layer1", "layer2"],
+    "layers": ["layer2", "layer4"],
     "backbone": "resnet18",
     "memory_efficient": true,
     "chunk_size": 4,
